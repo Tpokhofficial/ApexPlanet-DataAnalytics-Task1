@@ -1,0 +1,71 @@
+Data Quality Assessment
+(Based on the given Kaggle dataset)
+
+Dataset Overview
+Total rows: 147
+Total columns: 43
+
+Nature: Survey-based behavioural dataset
+Source: Kaggle (public dataset)
+
+Identified Data Quality Issues
+
+1️. Missing Values
+Following columns contain missing (NaN) values:
+
+What changes on behaviour have you experienced in yourself after playing violent video games? → 4 missing values
+sometimes I can not control the feeling to hit another person → 1 missing value
+I sometimes get too much jealous from people → 1 missing value
+I dont know why sometimes I feel bitter about things → 1 missing value
+
+Impact:
+Missing responses can bias behavioural analysis and reduce reliability of psychological indicators.
+
+2️. Duplicate / Redundant Columns
+Multiple columns represent the same information:
+
+City/ Residencial status
+City/ Residencial status.1
+City/ Residencial status.2
+City/ Residencial status.3
+
+Issue:
+These are repeated fields created due to survey form duplication.
+
+Impact:
+They increase dimensional redundancy and must be consolidated into one single column.
+
+3️. Incorrect Data Types
+
+Age column (What is your age?) is stored as text (object) instead of numeric.
+Timestamp column stored as text instead of datetime
+Likert-scale responses (Agree / Disagree / Strongly Agree) stored as text instead of ordinal categories.
+
+Impact:
+Prevents statistical analysis unless converted.
+
+4️. Inconsistent Text Formatting
+
+Gender values appear as: male, female (case inconsistency possible)
+City names contain extra spaces (e.g., "uttar pradesh ")
+
+Impact:
+Causes grouping and aggregation errors.
+
+5️. High Dimensionality of Similar Behavioural Questions
+
+Many columns measure aggression, anger, hostility with similar Likert responses.
+
+Issue:
+Raw data is not analysis-ready; requires feature engineering (index/score creation).
+
+Conclusion:
+
+Initial profiling revealed that the dataset contains:
+Missing values
+Redundant columns
+Incorrect data types
+Text inconsistencies
+Need for feature engineering
+
+Therefore, data cleaning and transformation are required before analysis.

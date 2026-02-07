@@ -1,0 +1,6 @@
+DATA SOURCE : Kaggle (edited)
+DATA NATURE : NON CONFIDENTIAL
+DATASET TYPE : GAMING AND AGGRESSION AMONG PUBLIC
+
+“This dataset is sourced from Kaggle and is publicly available. 
+It is used strictly for academic and portfolio demonstration purposes.”
